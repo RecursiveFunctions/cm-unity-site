@@ -1,0 +1,42 @@
+name: Sync constitution PDF
+
+# Pulls the latest generated constitution PDF from CMUnity/constitution.
+# Triggered the moment that repo regenerates it (repository_dispatch),
+# or manually from the Actions tab (workflow_dispatch).
+
+on:
+  repository_dispatch:
+    types: [constitution-updated]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-constitution
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download latest constitution PDF
+        run: |
+          curl -fsSL --retry 3 -o constitution.pdf \
+            https://raw.githubusercontent.com/CMUnity/constitution/main/pdfs/CMUnity_Constitution.pdf
+          file constitution.pdf | grep -q 'PDF document'
+
+      - name: Commit if changed
+        run: |
+          git add constitution.pdf
+          if git diff --cached --quiet; then
+            echo "Constitution PDF unchanged; nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "dist: sync constitution PDF from CMUnity/constitution"
+          git push
