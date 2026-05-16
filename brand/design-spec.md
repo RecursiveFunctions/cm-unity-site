@@ -3,7 +3,7 @@ title: "CMUnity — Brand & Web Design Specification"
 subtitle: "A brief for the brand designer"
 author: "CMUnity"
 date: "May 2026"
-version: "v1.0"
+version: "v1.2"
 ---
 
 # CMUnity — Brand & Web Design Spec
@@ -16,39 +16,48 @@ version: "v1.0"
 
 **Live site:** [cm-unity.org](https://cm-unity.org) · **Repo:** github.com/recursivefunctions (Jekyll on GitHub Pages) · **Socials:** instagram.com/cm.unity · discord.gg/ECMDdHva
 
+**Direction: COMMONS — selected (v1.2).** Three directions were built as the *actual* CMUnity homepage for review at **[preview.cm-unity.org](https://preview.cm-unity.org)** (`Quorum`, `Forum`, `Commons`). **Commons is chosen** — warmest, most invitational, the best fit for a friendship-first mission. This spec is now written around Commons as the single locked direction; Quorum and Forum remain on the preview only as rejected-alternative reference. §2–§5 give the locked Commons system; the mark stays exploratory within the chosen *woven-gathering* concept.
+
 ---
 
 ## 1. About CMUnity
 
-CMUnity is a student-led organization at Carnegie Mellon University that exists to:
+CMUnity is an official, student-led organization at Carnegie Mellon University with one mission: **everyone at CMU becomes friends with each other.** "Everyone" is deliberately expansive — students, staff, faculty, and eventually administration — and reaches past campus, too: CMU people befriending people beyond CMU.
 
-- **Break cliques and heal polarization** by hosting structured discussion and debate across student groups.
-- **Advocate for mental health** and the structural conditions that support student wellbeing.
-- **Champion interdisciplinary, self-motivated learning** — curiosity beyond a major's requirements.
-- **Foreground ethics** in technical and professional life, over pure career optimization.
+That friendship is not the end; it is the foundation. CMUnity holds that **a stronger communal fabric yields a more powerful and more sophisticated social movement** than a weak one. The org is young and growing, and is actively recruiting — exec roles are open to anyone.
 
-Programming includes weekly general-body meetings, facilitated discussions on policy / religion / disparities, and the **Debates** series — an archive of inter-org political debates (e.g., CMU Democrats vs. CMU Republicans, YAL vs. CMU Republicans on Venezuela).
+### The three pillars
 
-**Audience.** Carnegie Mellon undergraduates and graduate students. Secondary: faculty, advisors, prospective members, peer student orgs, and the broader Pittsburgh civic community.
+Everything CMUnity does serves the mission through three pillars:
 
-**Brand promise.** *More than just a connection.* CMUnity hosts the conversations the rest of campus skips — seriously, generously, and in public.
+1. **Friendship — reshaping the social network.** Forming new bonds across the groups that normally never meet; widening who counts as "us" to all of CMU and beyond.
+2. **Discourse — rehabilitating the flow of information.** Increasing the frequency and duration of substantive conversation on philosophy, politics, religion, culture, and the human condition — making communication more efficient and more conducive to the truth. *The Debates series (CMU Democrats vs. Republicans, YAL vs. Republicans on Venezuela) is an instrument of this pillar, not the center of the brand.*
+3. **Kindness & care — direct charity.** Showing genuine kindness; a large share of the work is direct care for neighbors.
+
+**Audience.** All of Carnegie Mellon — students first, but explicitly staff, faculty, and administration too — plus friends and neighbors beyond campus. Prospective exec/members are a primary near-term audience (the org is recruiting).
+
+**Brand promise.** *More than just a connection.* CMUnity turns a campus of strangers into a community of friends — and turns that community into a movement.
 
 ---
 
 ## 2. Brand positioning & tone
 
+> **Status: LOCKED.** Tone and the CMU relationship are decided and should not be reopened by the designer.
+
 ### Voice attributes
 
-CMUnity sounds **serious, civic, and deliberative**. Editorial in posture; humane in execution. The brand should feel like a small institution that takes its students' inner lives seriously — closer to a campus journal of record than to a club promo.
+CMUnity sounds **warm, earnest, and movement-building** — friendship-first, but intellectually serious where it counts (the discourse pillar). The brand should feel like an invitation into something growing: closer to an organizing call from people who genuinely like you than to a journal of record or a club promo. Warmth is the dominant register; rigor is the backbone, not the surface.
 
-| We are                          | We are not                                |
-| ------------------------------- | ----------------------------------------- |
-| Considered, deliberate          | Hot-take, performative                    |
-| Generous, inviting              | Cliquey, gatekept                         |
-| Plural, even-handed             | Partisan-coded                            |
-| Editorial, considered typography| Marketing-y, decorative                   |
-| CMU-adjacent, recognizable      | A CMU sub-brand pretending to be official |
-| Pittsburgh-rooted               | Generic / placeless                       |
+| We are                                   | We are not                                |
+| ---------------------------------------- | ----------------------------------------- |
+| Warm, sincere, inviting                  | Cliquey, gatekept, ironic                 |
+| Hopeful, movement-minded                 | Cynical, resigned                         |
+| Intellectually serious (when it matters) | Anti-intellectual *or* aloofly academic   |
+| Plural — all of CMU, and beyond          | Students-only, partisan-coded             |
+| Generous, care-forward                   | Marketing-y, transactional                |
+| CMU-adjacent, recognizable               | A CMU sub-brand pretending to be official |
+
+The center of gravity is **friendship as foundation**: a campus of strangers becoming a community of friends, and that community becoming a movement. Discourse and care are how that friendship does work — the tone should make a first-time visitor feel *wanted*, then show them the substance.
 
 ### Relationship to CMU's identity
 
@@ -56,36 +65,39 @@ CMUnity sounds **serious, civic, and deliberative**. Editorial in posture; human
 
 ### Reference moodboard (for direction only — not to copy)
 
-- **The Atlantic, Lapham's Quarterly, n+1, Comment Magazine** — editorial bones, restrained palettes, serif headlines.
-- **Princeton's University Center for Human Values, Stanford's McCoy Family Center for Ethics in Society** — institutional civic seriousness applied to a student-adjacent program.
-- **The Markup, The Pudding, Pew Research** — civic / data design; rigorous and modern without being austere.
+- **The genuine warmth of mutual-aid / community-organizing identities** — invitational, human, hopeful; the feeling of being welcomed in.
+- **Comment Magazine, Plough, Works in Progress** — for the discourse pillar: serious ideas presented warmly, not austerely.
+- **The Atlantic / Lapham's Quarterly** — editorial bones for long-form (the Debates archive) without letting that register dominate the whole brand.
 
-Avoid: club-marketing aesthetics (loud gradients, sticker packs, dense emoji), generic SaaS landing pages, anything that would read as a startup pitch.
+Avoid: club-marketing aesthetics (loud gradients, sticker packs, dense emoji), generic SaaS landing pages, startup-pitch energy, *and* cold institutional/think-tank austerity — friendship-first means the brand must never feel like it's keeping the reader at arm's length.
+
+### Direction (selected)
+
+### Selected direction: Commons
+
+**Commons is the chosen direction.** It reads as *a community welcoming you in* — the warmest of the three explored, and the closest fit for a friendship-first mission where the first job is making a visitor feel wanted. Quorum (warm-editorial) and Forum (institutional) were the explored alternatives and remain on the preview as reference only; their type and color are out of scope from here.
+
+The remainder of this spec (§3–§5) describes the **Commons system** as locked. The only area still exploratory is the *execution* of the mark, within the chosen **woven-gathering** concept (overlapping rings sharing a center — friendship as overlapping circles). One historical note for the designer: if the discourse pillar ever needs a more editorial long-form treatment (the Debates archive), Quorum's serif register is the sanctioned place to borrow from — but the master brand is Commons.
 
 ---
 
 ## 3. Typography
 
-Type is the single most important brand asset for CMUnity. The current pairing (Playfair Display + Open Sans) is close in spirit but needs to be reconsidered as a system — heading, body, accent — with deliberate scale, weights, and a brand-defining display face.
+> **Status: LOCKED (Commons).** The pairing below ships. Both families are open-licensed (SIL OFL), available on Google Fonts, variable, and already running on the preview. **Playfair Display and Inter are explicitly out** (overexposed; the current site's Playfair is a placeholder).
 
-### What we need
+### The locked type system
 
-| Role               | Function                                                                                          |
-| ------------------ | ------------------------------------------------------------------------------------------------- |
-| **Display serif**  | Headlines, hero, marquee debate titles. Should carry editorial weight and a recognizable voice.   |
-| **Body sans**      | Long-form reading, UI, captions. Neutral, legible across sizes, with good italics and small caps. |
-| **Accent / mono**  | Citation, byline, dateline, debate metadata, data labels. Adds civic-document texture.            |
+| Role        | Family                                | Function                                                                 |
+| ----------- | ------------------------------------- | ------------------------------------------------------------------------ |
+| **Display** | **Bricolage Grotesque** (12–96 opsz)  | Headlines, hero, pillar titles, nav, kickers (tracked uppercase, ~700–800).|
+| **Text**    | **Source Serif 4** (8–60 opsz)        | Long-form reading, body, captions. Warm humanist serif with real italics.|
+| **Kicker/meta** | Bricolage Grotesque, 700, ~0.18em tracked, uppercase | Eyebrows, section labels, datelines. No separate mono face. |
 
-### Direction for the designer
-
-- Propose **2–3 candidate pairings**. At least one option should use **open-licensed faces** (Google Fonts / SIL OFL) so the site can ship without commercial licensing; at least one may include a commercial face if it materially strengthens the brand.
-- Display serif should feel like a *journal*, not a *wedding invitation*. Candidates to consider: **Source Serif 4, Newsreader, Fraunces (with care), GT Sectra, Tiempos Headline, Publico Headline, Lyon Display, EB Garamond, Caslon Doric Display**. Avoid Playfair Display (overexposed).
-- Body sans should be **functional and warm** — neither stiff nor playful. Candidates: **Inter, Söhne, Untitled Sans, IBM Plex Sans, GT America, ABC Diatype, Source Sans 3**.
-- Accent mono is optional but encouraged: **JetBrains Mono, IBM Plex Mono, GT America Mono, Berkeley Mono**.
+Rationale: a contemporary humanist *grotesque* display reads warm and human (friendship-first) without childishness, while a readable optical serif body keeps the discourse pillar credible for long-form. The pairing carries belonging *and* rigor — the exact balance the mission needs. (If the Debates archive ever wants a more editorial serif headline, the sanctioned borrow is Quorum's Fraunces — but Bricolage is the master display.)
 
 ### Deliverables (typography)
 
-- Final pairing recommendation with rationale.
+- Confirm the locked pairing in production with a tuned type scale (pairing itself is decided — substitute only with strong cause and org sign-off).
 - A complete **type scale** (display, h1–h6, body large, body, small, caption) with sizes, line-heights, and tracking for both web (rem-based) and print.
 - Weight and style usage rules (when to italicize, when to use small caps, when to use the mono).
 - **Webfont licensing path** and CSS `@font-face` strategy.
@@ -95,20 +107,27 @@ Type is the single most important brand asset for CMUnity. The current pairing (
 
 ## 4. Color
 
-### Direction
+> **Status: LOCKED (Commons).** The palette below ships. Warm, invitational, belonging-forward — bone ground, deep plum primary, ochre warmth, CMU red strictly reserved.
 
-CMUnity's palette should feel **deliberative and rooted** — not neutral-corporate, not student-club bright. Think a single confident primary, a deep neutral, warm paper-like grounds, and CMU red held back for accent.
+### The locked palette
 
-### Recommended composition (designer may adjust)
+| Token        | Role                                  | Hex        |
+| ------------ | ------------------------------------- | ---------- |
+| `ground`     | Page field (warm bone)                | `#F3ECDF`  |
+| `paper`      | Lifted card / surface                 | `#FBF6EC`  |
+| `ink`        | Body + headline near-black            | `#211B15`  |
+| `muted`      | Secondary text                        | `#6E6052`  |
+| `rule`       | Hairline rules / borders              | `#DDD0BB`  |
+| `plum`       | **Primary** brand color               | `#5A2A3A`  |
+| `plum-2`     | Primary tint (third pillar, hovers)   | `#763A4D`  |
+| `ochre`      | Warm second accent (links, kickers)   | `#B9742F`  |
+| `accent-cmu` | **Reserved** CMU red — one moment/page | `#C41230`  |
 
-- **One primary brand color** (not red). A considered, slightly desaturated hue with editorial weight — e.g., a deep ink, oxblood, forest, slate, or indigo. This is the dominant color of the site and identity.
-- **One neutral / surface family** — a warm off-white "paper" plus 3–5 grays (warm, not cool) for typography and UI surfaces.
-- **CMU red (#C41230) as a reserved accent** — used sparingly for institutional moments (CTA hover, "Carnegie Mellon" attribution, an underline beneath the wordmark on official-org headers). Should never carry the bulk of a page.
-- **Two functional accents** — for the Debates series, where we already use two-color framing to represent opposing positions. These should be brand-tuned versions of "voice A / voice B" colors (the current site uses ad-hoc blue / yellow / red — the designer should formalize this).
+Rules of use: **plum** is the dominant identity color (mission card, CTAs, primary mark ring). **ochre** carries warmth and wayfinding (kickers, links, the hand-drawn hero underline). **CMU red is never structural** — it appears once per page, in the official-org attribution pill only. **Voice A / Voice B** for the Debates two-side framing derive from plum (Voice A) and ochre (Voice B), keeping the debate UI inside the brand rather than the current ad-hoc blue/yellow.
 
 ### Deliverables (color)
 
-- Final palette with **named tokens** (e.g., `ink`, `paper`, `accent-cmu`, `voice-a`, `voice-b`, `mute-1…5`).
+- Production palette as **named tokens** (the table above is the source of truth) — confirm, don't re-pick.
 - For each color: **hex, RGB, HSL, CMYK, Pantone (nearest), and CSS custom-property name**.
 - A **WCAG AA contrast matrix** showing every text-on-surface combination the site uses, with pass/fail notation. Brand should hit AA for body and AAA for body where feasible.
 - A **dark-mode variant** of the palette (CMUnity hosts long-form reading; dark mode matters).
@@ -116,6 +135,8 @@ CMUnity's palette should feel **deliberative and rooted** — not neutral-corpor
 ---
 
 ## 5. Logo system
+
+> **Status: CONCEPT LOCKED, execution OPEN.** The mark concept is **woven gathering** (as sketched in Commons). The designer refines its execution but does not change concepts. The Commons preview ships a working SVG sketch (three overlapping rings through a shared center) — a starting point, not final art.
 
 CMUnity needs a full logo system, not a single asset. The current site uses a placeholder "C" in a black disc — this should be replaced.
 
@@ -130,16 +151,9 @@ CMUnity needs a full logo system, not a single asset. The current site uses a pl
 
 ### Mark concept direction
 
-The mark should evoke **connection / bridges** *and* **unity / circle / gathering** — these are the two ideas that most directly translate the org's mission ("more than just a connection," healing polarization, breaking cliques).
+The locked concept is **woven gathering**: overlapping rings sharing a center — friendship as overlapping circles, many people forming one community. It reads as unity and gathering directly, and carries a subtle weave/tartan echo to CMU without literal plaid. This concept won over the explored alternatives (bridged circle, two arcs meeting) because overlap — not a bridge between two sides — is the truest picture of a friendship-first mission: it isn't reconciling two camps, it's enlarging one circle.
 
-Concept seeds for the designer to explore:
-
-1. **Bridged circle.** A circular form interrupted and rejoined by a horizontal element — gap + bridge. Reads as both a gathering (the ring) and a connection across difference (the bridge).
-2. **Two arcs meeting.** Two open semicircles inclined toward each other, forming a complete circle only when read together. Evokes dialogue and consent.
-3. **Woven node.** Several lines crossing through a single point or knot — gathering, weaving, common ground. (Carries a subtle tartan/weave echo to CMU without literal plaid.)
-4. **Concentric gathering.** Rings of varying weight radiating from / pulling toward a center — community formation.
-
-The designer should produce explorations across all four directions before narrowing. The final mark must:
+The designer refines execution within this concept — ring count, weight, overlap geometry, whether rings are open or closed, how it locks up with the wordmark. The Commons preview's three-ring sketch (plum / ochre / plum-tint) is the reference starting point. The final mark must:
 
 - Read at **16×16 px** (favicon) without losing identity.
 - Work as a **single-color silhouette** on red, white, black, and the brand primary.
@@ -148,8 +162,8 @@ The designer should produce explorations across all four directions before narro
 
 ### Wordmark direction
 
-- "CMUnity" set in a custom or carefully selected display cut. The visual joke — *CMU* nested inside *Community* — should be **typographically articulated**, not literally drawn: e.g., a hairline weight shift, a tonal shift in the "CMU" letters, a small-caps treatment, or a custom ligature. Subtle is better than literal.
-- A **secondary descriptor lockup** is required: `CMUnity` over `Carnegie Mellon University` (or `at Carnegie Mellon`) in small caps, to make the institutional affiliation legible at first glance. This descriptor uses the body sans, not the display serif.
+- "CMUnity" set in **Bricolage Grotesque** (the locked display), heavy weight, tight tracking — as on the Commons preview. The visual joke — *CMU* nested inside *Community* — should be **typographically articulated**, not literally drawn: e.g., a hairline weight shift or tonal shift in the "CMU" letters, or a custom ligature. Subtle is better than literal.
+- A **secondary descriptor lockup** is required: `CMUnity` over `Carnegie Mellon University` (or `at Carnegie Mellon`), the descriptor set in tracked uppercase Bricolage (the kicker treatment), to make the institutional affiliation legible at first glance.
 
 ### Deliverables (logo)
 
@@ -217,7 +231,7 @@ The designer should produce a small component library so a developer can impleme
 
 ### Motion & interaction
 
-- **Restraint.** No parallax, no scroll-jacking, no aggressive entrance animations. The brand is deliberative; motion should be functional.
+- **Restraint.** No parallax, no scroll-jacking, no aggressive entrance animations. The brand is warm but composed; motion should be gentle and functional (the Commons preview's soft "bloom" rise on load is the reference).
 - **Acceptable:** subtle hover lifts (≤2 px translate, ≤120 ms ease), underline reveals on links, focus rings (visible, accessible), gentle fade-ins on first scroll-into-view (≤300 ms, no stagger longer than 80 ms).
 - **Reduced-motion:** all motion must respect `prefers-reduced-motion: reduce`.
 
@@ -289,12 +303,12 @@ The designer should return:
 
 | Phase                         | Duration       | Deliverable                                       |
 | ----------------------------- | -------------- | ------------------------------------------------- |
-| 1. Discovery & moodboarding   | 1 week         | 3 directional moodboards, narrowed to one         |
-| 2. Identity exploration       | 2 weeks        | Logo, mark, wordmark explorations + typography    |
-| 3. Identity refinement        | 1 week         | Final identity system + favicon                   |
-| 4. Site template design       | 2 weeks        | All page templates at three breakpoints           |
-| 5. Component library          | 1 week         | Figma library, tokens, handoff documentation      |
-| 6. Production handoff         | 0.5 week       | All production assets in repo + brand book PDF    |
+| 0. Direction selection        | ✅ done        | **Commons selected** — type, palette, mark concept locked (this doc, live preview) |
+| 1. Mark execution             | 1–2 weeks      | Final woven-gathering mark + wordmark + lockups from the locked concept |
+| 2. Identity refinement        | 1 week         | Favicon set, single-color/inverse variants, construction sheet |
+| 3. Site template design       | 2 weeks        | All page templates at three breakpoints, on the Commons system |
+| 4. Component library          | 1 week         | Figma library, tokens (palette table above), handoff docs |
+| 5. Production handoff         | 0.5 week       | All production assets in repo + brand book PDF    |
 
 ---
 
@@ -306,12 +320,14 @@ The designer should return:
 - `debates/debates.html` — debates index; uses Inter, dark glass-card UI, blue/yellow accents for opposing-voice framing.
 - `debates/dems-vs-repubs-25.html`, `debates/venezuela.html` — debate detail pages.
 
-**Open questions to resolve in discovery:**
+**Resolved (v1.2):** Direction = **Commons**. Type = Bricolage Grotesque + Source Serif 4. Palette = bone/plum/ochre (table in §4). Mark concept = woven gathering. Tagline in use across the preview: *More than just a connection.*
 
-- Should the wordmark fully spell "CMUnity" or treat "CMU + nity" as two typographic tones?
-- Is there appetite for an institutional **secondary mark** (e.g., a seal-style mark for letterheads and certificates) in addition to the primary mark?
-- Should the brand support a **publication sub-identity** (the Debates series) — a sibling logotype, or stay unified under one brand?
-- Does the org want a **tagline** locked at v1, or kept fluid? Current candidate: *More than just a connection.*
+**Open questions remaining for the designer:**
+
+- Wordmark: keep "CMUnity" as one tone, or articulate the *CMU*-in-*Community* nesting with a subtle weight/tone shift in the "CMU" letters? (Lean: subtle articulation.)
+- Is there appetite for an institutional **secondary/seal mark** (letterheads, certificates) alongside the primary woven-gathering mark?
+- Debates series: a sibling sub-logotype, or stay fully unified under the one Commons brand? (Lean: unified; Debates is an instrument of the discourse pillar, not a separate identity.)
+- Lock *More than just a connection* as the tagline at v1, or keep fluid until the friendship-first copy voice settles?
 
 ---
 
