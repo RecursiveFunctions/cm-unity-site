@@ -6,275 +6,413 @@ permalink: /
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMUnity - Carnegie Mellon University</title>
-    <meta name="description" content="CMUnity is an official Carnegie Mellon University student organization turning a campus of strangers into a community of friends. More than just a connection.">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23111827'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='19' font-weight='bold' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+    <title>CMUnity — Carnegie Mellon University</title>
+    <meta name="description" content="CMUnity is an official Carnegie Mellon University student organization with one mission: that everyone here becomes friends with each other. More than just a connection.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Ccircle cx='32' cy='25' r='15' stroke='%235A2A3A' stroke-width='5'/%3E%3Ccircle cx='23' cy='40' r='15' stroke='%235A2A3A' stroke-width='5'/%3E%3Ccircle cx='41' cy='40' r='15' stroke='%235A2A3A' stroke-width='5'/%3E%3C/svg%3E">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cm-unity.org/">
     <meta property="og:title" content="CMUnity — Carnegie Mellon University">
     <meta property="og:description" content="An official Carnegie Mellon University student organization turning a campus of strangers into a community of friends. More than just a connection.">
     <meta name="twitter:card" content="summary">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ground:  '#F3ECDF',
+              paper:   '#FBF6EC',
+              ink:     '#211B15',
+              muted:   '#6E6052',
+              rule:    '#DDD0BB',
+              plum:    '#5A2A3A',
+              plumtint:'#763A4D',
+              ochre:   '#B9742F',
+              cmured:  '#C41230',
+            },
+            fontFamily: {
+              display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+              serif:   ['"Source Serif 4"', 'Georgia', 'serif'],
+            },
+            maxWidth: { prose: '68ch' },
+          }
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        .heading-font {
-            font-family: 'Playfair+Display', serif;
+        :root { color-scheme: light; }
+        html { scroll-behavior: smooth; }
+        body { font-family: '"Source Serif 4"', Georgia, serif; }
+
+        /* Kicker / eyebrow — Bricolage, heavy, tracked uppercase (spec §3) */
+        .kicker {
+            font-family: '"Bricolage Grotesque"', system-ui, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
         }
 
-        .cmu-red {
-            background-color: #C41230;
-        }
-        
-        .cmu-red-text {
-            color: #C41230;
+        /* Accessible focus — visible on every interactive element (spec §7) */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #5A2A3A;
+            outline-offset: 3px;
+            border-radius: 2px;
         }
 
-        .hero-pattern {
-            background-color: #ffffff;
-            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
-            background-size: 20px 20px;
+        /* Hero hand-drawn ochre underline (ochre = decoration, AA-safe) */
+        .ink-underline { position: relative; white-space: nowrap; }
+        .ink-underline svg {
+            position: absolute; left: 0; right: 0; bottom: -0.16em;
+            width: 100%; height: 0.34em; overflow: visible;
         }
+
+        /* Restrained "bloom" rise on load + scroll reveal (spec §7 motion) */
+        .bloom { opacity: 0; transform: translateY(14px); }
+        .bloom-in { animation: bloom 0.62s cubic-bezier(0.22,0.61,0.36,1) forwards; }
+        @keyframes bloom { to { opacity: 1; transform: none; } }
+
+        .reveal { opacity: 0; transform: translateY(18px); transition: opacity .42s ease, transform .42s ease; }
+        .reveal.shown { opacity: 1; transform: none; }
+
+        .lift { transition: transform .12s ease, box-shadow .12s ease; }
+        .lift:hover { transform: translateY(-2px); }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .bloom, .reveal { opacity: 1 !important; transform: none !important; }
+            .bloom-in { animation: none !important; }
+            .lift { transition: none; }
+            .lift:hover { transform: none; }
+        }
+
+        .skip-link {
+            position: absolute; left: -999px; top: 0;
+            background: #5A2A3A; color: #FBF6EC; padding: .75rem 1.25rem; z-index: 100;
+            font-family: '"Bricolage Grotesque"', sans-serif; font-weight: 700;
+        }
+        .skip-link:focus { left: 0; }
     </style>
 </head>
-<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
+<body class="bg-ground text-ink antialiased selection:bg-plum selection:text-paper">
 
-    <!-- Top Navigation Bar (Imitating TartanConnect Style) -->
-    <nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <!-- Logo / Brand -->
-                    <div class="flex-shrink-0 flex items-center gap-3">
-                        <div class="h-10 w-10 bg-gray-900 rounded-full flex items-center justify-center text-white font-bold text-xl">C</div>
-                        <div class="flex flex-col">
-                            <span class="text-2xl font-bold tracking-tight text-gray-900 heading-font">CMUnity</span>
-                            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Carnegie Mellon University</span>
-                        </div>
-                    </div>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-ground/85 backdrop-blur border-b border-rule">
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+            <div class="flex items-center justify-between h-20">
+                <a href="/" class="flex items-center gap-3 group" aria-label="CMUnity home">
+                    <svg viewBox="0 0 64 64" fill="none" class="h-9 w-9 shrink-0" aria-hidden="true">
+                        <circle cx="32" cy="25" r="15" stroke="#5A2A3A" stroke-width="4"/>
+                        <circle cx="23" cy="40" r="15" stroke="#B9742F" stroke-width="4"/>
+                        <circle cx="41" cy="40" r="15" stroke="#763A4D" stroke-width="4"/>
+                    </svg>
+                    <span class="flex flex-col leading-none">
+                        <span class="font-display font-extrabold text-2xl tracking-tight">
+                            <span class="text-plum">CMU</span><span class="text-ink">nity</span>
+                        </span>
+                        <span class="kicker text-muted mt-1" style="font-size:0.6rem">Carnegie Mellon University</span>
+                    </span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-9 font-display font-semibold text-[0.95rem]">
+                    <a href="#mission" class="text-ink hover:text-plum transition-colors">Mission</a>
+                    <a href="#pillars" class="text-ink hover:text-plum transition-colors">Pillars</a>
+                    <a href="#discourse" class="text-ink hover:text-plum transition-colors">Discourse</a>
+                    <a href="#join" class="text-ink hover:text-plum transition-colors">Get Involved</a>
+                    <a href="https://discord.gg/ECMDdHva" class="bg-plum text-paper px-5 py-2.5 rounded-full hover:bg-plumtint transition-colors lift">Join our Discord</a>
                 </div>
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-900 font-semibold hover:text-[#C41230] transition-colors">Home</a>
-                    <a href="#principles" class="text-gray-500 hover:text-[#C41230] transition-colors">Our Principles</a>
-                    <a href="#events" class="text-gray-500 hover:text-[#C41230] transition-colors">Events</a>
-                    <a href="#contact" class="text-gray-500 hover:text-[#C41230] transition-colors">Contact</a>
-                    <a href="https://discord.gg/ECMDdHva" class="cmu-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-800 transition-colors shadow-md transform hover:-translate-y-0.5 duration-200">Join Us</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="flex items-center md:hidden">
-                    <button type="button" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+
+                <button id="menu-btn" type="button" class="md:hidden p-2 text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
-                <a href="#principles" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">Our Principles</a>
-                <a href="#events" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">Events</a>
-                <a href="https://discord.gg/ECMDdHva" class="block px-3 py-2 rounded-md text-base font-medium text-[#C41230] font-bold">Join CMUnity</a>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-rule bg-ground">
+            <div class="px-6 py-4 flex flex-col gap-1 font-display font-semibold">
+                <a href="#mission" class="py-2.5 text-ink hover:text-plum">Mission</a>
+                <a href="#pillars" class="py-2.5 text-ink hover:text-plum">Pillars</a>
+                <a href="#discourse" class="py-2.5 text-ink hover:text-plum">Discourse</a>
+                <a href="#join" class="py-2.5 text-ink hover:text-plum">Get Involved</a>
+                <a href="https://discord.gg/ECMDdHva" class="mt-2 inline-block bg-plum text-paper px-5 py-3 rounded-full text-center">Join our Discord</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="relative bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-                <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                    <polygon points="50,0 100,0 50,100 0,100" />
-                </svg>
+    <main id="main">
 
-                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                    <div class="sm:text-center lg:text-left">
-                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl heading-font">
-                            <span class="block xl:inline">More than just</span>
-                            <span class="block cmu-red-text xl:inline">a connection.</span>
-                        </h1>
-                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                            Breaking cliques and healing polarization on campus. We facilitate thoughtful, nuanced discussions about substantive issues and prioritize ethics over optimization.
-                        </p>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                            <div class="rounded-md shadow">
-                                <a href="https://discord.gg/ECMDdHva" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white cmu-red hover:bg-red-800 md:py-4 md:text-lg transition-all">
-                                    Get Involved
-                                </a>
-                            </div>
-                            <div class="mt-3 sm:mt-0 sm:ml-3">
-                                <a href="#principles" class="w-full flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg transition-all">
-                                    Our Principles
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </div>
-        <!-- Right side Hero Image Placeholder -->
-        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-100 flex items-center justify-center">
-             <!-- Using a pattern placeholder instead of a specific image to ensure compilation/rendering safety -->
-             <div class="w-full h-full hero-pattern flex items-center justify-center text-gray-300">
-                <div class="text-center p-10">
-                    <i class="fas fa-users text-9xl opacity-20"></i>
+    <!-- Hero -->
+    <header class="relative overflow-hidden">
+        <!-- Decorative woven motif, restrained -->
+        <svg class="pointer-events-none absolute -right-24 -top-16 w-[34rem] h-[34rem] opacity-[0.07]" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <circle cx="32" cy="25" r="15" stroke="#5A2A3A" stroke-width="2"/>
+            <circle cx="23" cy="40" r="15" stroke="#B9742F" stroke-width="2"/>
+            <circle cx="41" cy="40" r="15" stroke="#763A4D" stroke-width="2"/>
+        </svg>
+
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 pt-20 pb-24 md:pt-28 md:pb-32 relative">
+            <div class="max-w-3xl">
+                <p class="kicker text-ochre bloom bloom-in" style="animation-delay:0ms">An official Carnegie Mellon University student organization</p>
+
+                <h1 class="font-display font-extrabold tracking-tight text-ink mt-6 text-5xl sm:text-6xl lg:text-7xl leading-[1.02] bloom bloom-in" style="animation-delay:80ms">
+                    More than just<br>
+                    a <span class="ink-underline">connection<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 C 40 2, 80 12, 120 6 S 180 2, 198 7" stroke="#B9742F" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span>.
+                </h1>
+
+                <p class="mt-8 text-xl sm:text-2xl text-ink/90 max-w-prose leading-relaxed bloom bloom-in" style="animation-delay:160ms">
+                    CMUnity exists for one thing: that everyone here becomes friends with each
+                    other. Friendship isn't the end &mdash; it's the foundation for something larger.
+                </p>
+
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 bloom bloom-in" style="animation-delay:240ms">
+                    <a href="https://discord.gg/ECMDdHva" class="inline-flex items-center justify-center gap-2 bg-plum text-paper font-display font-bold px-8 py-4 rounded-full text-lg hover:bg-plumtint transition-colors lift">
+                        Join our Discord
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#mission" class="inline-flex items-center justify-center bg-transparent text-plum font-display font-bold px-8 py-4 rounded-full text-lg border border-plum/30 hover:border-plum hover:bg-paper transition-colors">
+                        Read our mission
+                    </a>
                 </div>
-             </div>
+            </div>
         </div>
     </header>
 
-    <!-- Mission / What We Do Section -->
-    <div class="bg-gray-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold heading-font mb-6">Redefining Campus Culture</h2>
-            <p class="max-w-3xl mx-auto text-lg text-gray-300">
-                CMUnity exists to support interdisciplinary and self-motivated learning while advocating for mental health. We believe in prioritizing ethical issues over career optimization and creating spaces where every student belongs.
-            </p>
-        </div>
-    </div>
-
-    <!-- Principles Grid -->
-    <div id="principles" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-base cmu-red-text font-semibold tracking-wide uppercase">Core Values</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 heading-font sm:text-4xl">
-                    What We Stand For
+    <!-- Mission strip (plum = primary brand moment, spec §4) -->
+    <section id="mission" aria-labelledby="mission-h" class="bg-plum text-paper">
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 md:py-28">
+            <div class="max-w-4xl reveal">
+                <p class="kicker text-paper/60">The mission</p>
+                <h2 id="mission-h" class="font-display font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl mt-5 leading-[1.05]">
+                    Everyone at CMU becomes friends with each other.
+                </h2>
+                <p class="mt-8 text-xl text-paper/80 max-w-prose leading-relaxed">
+                    &ldquo;Everyone&rdquo; is deliberately expansive &mdash; students, staff, faculty,
+                    eventually administration &mdash; and it reaches past campus, too: CMU people
+                    befriending people beyond CMU.
                 </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-                    Our foundation for a better Carnegie Mellon.
+                <p class="mt-5 text-xl text-paper/80 max-w-prose leading-relaxed">
+                    We hold that a stronger communal fabric makes for a stronger, more
+                    sophisticated movement than a weak one. So we build the fabric first.
                 </p>
             </div>
-
-            <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                
-                <!-- Card 1 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border-t-4 border-[#C41230]">
-                    <div class="text-4xl mb-4">🛠️</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Community Building</h3>
-                    <p class="text-gray-600">Breaking cliques and fostering genuine connections across campus groups.</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border-t-4 border-gray-800">
-                    <div class="text-4xl mb-4">🤝</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Solidarity</h3>
-                    <p class="text-gray-600">Spreading respect, solidarity, and deep empathy for all students.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border-t-4 border-[#C41230]">
-                    <div class="text-4xl mb-4">🗳️</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Civic Engagement</h3>
-                    <p class="text-gray-600">Encouraging active participation in democracy and local governance.</p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border-t-4 border-gray-800">
-                    <div class="text-4xl mb-4">🩹</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Healing Polarization</h3>
-                    <p class="text-gray-600">Bridging divides through dialogue and finding common ground.</p>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border-t-4 border-gray-800">
-                    <div class="text-4xl mb-4">🪷</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Mental Health</h3>
-                    <p class="text-gray-600">Advocating for student well-being and structural support systems.</p>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border-t-4 border-[#C41230]">
-                    <div class="text-4xl mb-4">🎓</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Interdisciplinary Learning</h3>
-                    <p class="text-gray-600">Supporting self-motivated curiosity beyond major requirements.</p>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border-t-4 border-gray-800">
-                    <div class="text-4xl mb-4">⚖️</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Nuanced Discussion</h3>
-                    <p class="text-gray-600">Facilitating thoughtful conversations on policy, religion, and disparities.</p>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border-t-4 border-[#C41230]">
-                    <div class="text-4xl mb-4">❤️</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Ethics First</h3>
-                    <p class="text-gray-600">Prioritizing ethical issues and human impact over career optimization.</p>
-                </div>
-
-            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Events Placeholder -->
-    <div id="events" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 heading-font">Upcoming Events</h2>
-                <a href="#" class="mt-4 md:mt-0 text-[#C41230] font-semibold hover:underline">View Calendar &rarr;</a>
+    <!-- Three pillars -->
+    <section id="pillars" aria-labelledby="pillars-h" class="bg-ground">
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 md:py-28">
+            <div class="reveal">
+                <p class="kicker text-ochre">How the mission works</p>
+                <h2 id="pillars-h" class="font-display font-extrabold tracking-tight text-4xl sm:text-5xl text-ink mt-5">
+                    Three pillars.
+                </h2>
+                <p class="mt-5 text-lg text-muted max-w-prose leading-relaxed">
+                    Everything CMUnity does serves the mission through three of them.
+                </p>
             </div>
 
-            <div class="bg-gray-50 rounded-lg p-8 border border-gray-200 text-center">
-                <div class="inline-block p-4 rounded-full bg-red-100 text-[#C41230] mb-4">
-                    <i class="far fa-calendar-alt text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900">Weekly General Body Meeting</h3>
-                <p class="text-gray-500 mt-2">Join us for our weekly discussion on campus ethics and community building.</p>
-                <button class="mt-6 px-6 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">
-                    Details Coming Soon
-                </button>
+            <div class="mt-14 grid gap-6 md:grid-cols-3">
+                <!-- Friendship -->
+                <article class="reveal bg-paper border border-rule rounded-2xl p-8 border-t-4 border-t-plum lift">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5A2A3A" stroke-width="1.5" aria-hidden="true">
+                        <circle cx="9" cy="8" r="3.2"/><circle cx="16" cy="10" r="2.6"/>
+                        <path d="M3.5 19c.6-3 3-4.6 5.5-4.6S14 16 14.5 19M15 15.2c2 .2 3.8 1.5 4.3 3.8" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="font-display font-bold text-2xl text-ink mt-5">Friendship</h3>
+                    <p class="kicker text-ochre mt-2" style="font-size:0.66rem">Reshaping the social network</p>
+                    <p class="mt-4 text-ink/85 leading-relaxed">
+                        Forming new bonds across the groups that normally never meet &mdash;
+                        widening who counts as &ldquo;us&rdquo; to all of CMU, and beyond.
+                    </p>
+                </article>
+
+                <!-- Discourse -->
+                <article class="reveal bg-paper border border-rule rounded-2xl p-8 border-t-4 border-t-ochre lift">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#B9742F" stroke-width="1.5" aria-hidden="true">
+                        <path d="M4 5h13a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3.5V15H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke-linejoin="round"/>
+                        <path d="M7 9h7M7 11.5h4.5" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="font-display font-bold text-2xl text-ink mt-5">Discourse</h3>
+                    <p class="kicker text-ochre mt-2" style="font-size:0.66rem">Rehabilitating the flow of information</p>
+                    <p class="mt-4 text-ink/85 leading-relaxed">
+                        More frequent, longer, more honest conversation about philosophy,
+                        politics, religion, culture, and the human condition. It lives in our
+                        Discord and our General Body Meetings.
+                    </p>
+                </article>
+
+                <!-- Kindness & care -->
+                <article class="reveal bg-paper border border-rule rounded-2xl p-8 border-t-4 border-t-plumtint lift">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#763A4D" stroke-width="1.5" aria-hidden="true">
+                        <path d="M12 20s-7-4.4-7-9.4A4 4 0 0 1 12 7a4 4 0 0 1 7 3.6C19 15.6 12 20 12 20Z" stroke-linejoin="round"/>
+                    </svg>
+                    <h3 class="font-display font-bold text-2xl text-ink mt-5">Kindness &amp; care</h3>
+                    <p class="kicker text-ochre mt-2" style="font-size:0.66rem">Direct charity</p>
+                    <p class="mt-4 text-ink/85 leading-relaxed">
+                        Genuine kindness &mdash; and a real share of the work that is plain,
+                        direct care for our neighbors.
+                    </p>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- CTA Section -->
-    <div class="bg-[#C41230]">
-        <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-white sm:text-4xl heading-font">
-                <span class="block">Ready to break the bubble?</span>
-                <span class="block text-red-200">Join CMunity.</span>
-            </h2>
-            <p class="mt-4 text-lg leading-6 text-red-100">
-                Connect with students who care about more than just the grind.
-            </p>
-            <a href="https://discord.gg/ECMDdHva" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-[#C41230] bg-white hover:bg-gray-50 sm:w-auto">
-                Join our discord server
-            </a>
+    <!-- Discourse vehicle: Discord + GBMs -->
+    <section id="discourse" aria-labelledby="discourse-h" class="bg-paper border-y border-rule">
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 md:py-28">
+            <div class="reveal max-w-prose">
+                <p class="kicker text-ochre">The discourse pillar, concretely</p>
+                <h2 id="discourse-h" class="font-display font-extrabold tracking-tight text-4xl sm:text-5xl text-ink mt-5">
+                    Where the conversation happens.
+                </h2>
+            </div>
+
+            <div class="mt-14 grid gap-6 md:grid-cols-2">
+                <div class="reveal bg-ground border border-rule rounded-2xl p-9">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#5A2A3A" stroke-width="1.5" aria-hidden="true">
+                        <path d="M4 5h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke-linejoin="round"/>
+                    </svg>
+                    <h3 class="font-display font-bold text-2xl text-ink mt-5">Our Discord</h3>
+                    <p class="mt-3 text-ink/85 leading-relaxed">
+                        The conversation is always open. Philosophy at 2pm, politics at 2am
+                        &mdash; drop in, disagree well, and stay. This is the easiest door in,
+                        and the one most worth walking through.
+                    </p>
+                </div>
+                <div class="reveal bg-ground border border-rule rounded-2xl p-9">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#B9742F" stroke-width="1.5" aria-hidden="true">
+                        <rect x="3.5" y="5" width="17" height="15" rx="2"/>
+                        <path d="M3.5 9.5h17M8 3.5v3M16 3.5v3" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="font-display font-bold text-2xl text-ink mt-5">General Body Meetings</h3>
+                    <p class="mt-3 text-ink/85 leading-relaxed">
+                        Everyone in one room, on a regular cadence. The same discourse,
+                        in person, with the people you&rsquo;re becoming friends with.
+                        Times and locations go out in the Discord.
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Recruiting CTA -->
+    <section id="join" aria-labelledby="join-h" class="bg-plum text-paper relative overflow-hidden">
+        <svg class="pointer-events-none absolute -left-20 -bottom-24 w-[28rem] h-[28rem] opacity-[0.08]" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <circle cx="32" cy="25" r="15" stroke="#FBF6EC" stroke-width="2"/>
+            <circle cx="23" cy="40" r="15" stroke="#FBF6EC" stroke-width="2"/>
+            <circle cx="41" cy="40" r="15" stroke="#FBF6EC" stroke-width="2"/>
+        </svg>
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-24 md:py-32 relative">
+            <div class="max-w-3xl reveal">
+                <p class="kicker text-paper/60">We&rsquo;re recruiting</p>
+                <h2 id="join-h" class="font-display font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl mt-5 leading-[1.05]">
+                    We&rsquo;re young, and we&rsquo;re looking for you.
+                </h2>
+                <p class="mt-8 text-xl text-paper/80 max-w-prose leading-relaxed">
+                    CMUnity is growing fast, and exec roles are open to anyone who wants to
+                    help build this. No application theater &mdash; come to the Discord,
+                    introduce yourself, and start.
+                </p>
+                <a href="https://discord.gg/ECMDdHva" class="mt-10 inline-flex items-center justify-center gap-2 bg-paper text-plum font-display font-bold px-8 py-4 rounded-full text-lg hover:bg-ground transition-colors lift">
+                    Join our Discord
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
-            <div class="flex justify-center space-x-6 md:order-2">
-                <a href="https://www.instagram.com/cm.unity/" class="text-gray-400 hover:text-white">
-                    <span class="sr-only">Instagram</span>
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
-                <a href="https://discord.gg/ECMDdHva" class="text-gray-400 hover:text-white">
-                    <span class="sr-only">Discord</span>
-                    <i class="fab fa-discord text-xl"></i>
-                </a>
-                <a href="mailto:rsunadaw@andrew.cmu.edu" class="text-gray-400 hover:text-white">
-                    <span class="sr-only">Email</span>
-                    <i class="fas fa-envelope text-xl"></i>
-                </a>
+    <footer id="contact" class="bg-ground border-t border-rule">
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-16">
+            <div class="flex flex-col gap-12 md:flex-row md:justify-between">
+                <div class="max-w-sm">
+                    <div class="flex items-center gap-3">
+                        <svg viewBox="0 0 64 64" fill="none" class="h-8 w-8" aria-hidden="true">
+                            <circle cx="32" cy="25" r="15" stroke="#5A2A3A" stroke-width="4"/>
+                            <circle cx="23" cy="40" r="15" stroke="#B9742F" stroke-width="4"/>
+                            <circle cx="41" cy="40" r="15" stroke="#763A4D" stroke-width="4"/>
+                        </svg>
+                        <span class="font-display font-extrabold text-xl">
+                            <span class="text-plum">CMU</span><span class="text-ink">nity</span>
+                        </span>
+                    </div>
+                    <p class="mt-4 font-serif italic text-muted text-lg">More than just a connection.</p>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="kicker text-muted">Get in touch</p>
+                    <div class="flex flex-col gap-2 text-ink">
+                        <a href="mailto:rsunadaw@andrew.cmu.edu" class="hover:text-plum transition-colors">rsunadaw@andrew.cmu.edu <span class="text-muted">&middot; org</span></a>
+                        <a href="mailto:rfernan2@andrew.cmu.edu" class="hover:text-plum transition-colors">rfernan2@andrew.cmu.edu <span class="text-muted">&middot; web</span></a>
+                    </div>
+                    <div class="flex items-center gap-5 mt-1">
+                        <a href="https://www.instagram.com/cm.unity/" class="text-muted hover:text-plum transition-colors" aria-label="CMUnity on Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="https://discord.gg/ECMDdHva" class="text-muted hover:text-plum transition-colors" aria-label="CMUnity Discord">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 7c2.6-1 5.4-1 8 0M8 17c2.6 1 5.4 1 8 0M6 8c-1.6 3-1.6 6 0 9M18 8c1.6 3 1.6 6 0 9" stroke-linecap="round"/><circle cx="9.5" cy="12.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="mailto:rsunadaw@andrew.cmu.edu" class="text-muted hover:text-plum transition-colors" aria-label="Email CMUnity">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="mt-8 md:mt-0 md:order-1">
-                <p class="text-center text-base text-gray-400">
-                    &copy; 2026 CMUnity. Official Student Organization at Carnegie Mellon University.
-                </p>
+
+            <div class="mt-14 pt-8 border-t border-rule flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <!-- The single reserved CMU-red moment (spec §4) -->
+                <span class="inline-flex items-center gap-2 self-start bg-cmured text-white kicker px-3.5 py-1.5 rounded-full" style="font-size:0.62rem">
+                    Official Student Organization &middot; Carnegie Mellon University
+                </span>
+                <p class="text-muted text-sm">&copy; 2026 CMUnity.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu (no framework)
+        (function () {
+            var btn = document.getElementById('menu-btn');
+            var menu = document.getElementById('mobile-menu');
+            btn.addEventListener('click', function () {
+                var open = menu.classList.toggle('hidden') === false;
+                btn.setAttribute('aria-expanded', String(open));
+            });
+            menu.querySelectorAll('a').forEach(function (a) {
+                a.addEventListener('click', function () {
+                    menu.classList.add('hidden');
+                    btn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+
+        // Gentle scroll reveal — respects reduced-motion
+        (function () {
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var els = document.querySelectorAll('.reveal');
+            if (reduce || !('IntersectionObserver' in window)) {
+                els.forEach(function (el) { el.classList.add('shown'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+            els.forEach(function (el) { io.observe(el); });
+        })();
+    </script>
 
 </body>
 </html>
