@@ -31,7 +31,7 @@ That friendship is not the end; it is the foundation. CMUnity holds that **a str
 Everything CMUnity does serves the mission through three pillars:
 
 1. **Friendship — reshaping the social network.** Forming new bonds across the groups that normally never meet; widening who counts as "us" to all of CMU and beyond.
-2. **Discourse — rehabilitating the flow of information.** Increasing the frequency and duration of substantive conversation on philosophy, politics, religion, culture, and the human condition — making communication more efficient and more conducive to the truth. The vehicle is **non-debate**: reading groups, facilitated dialogues, and salons (specifics forming). *Note: the `/debates/` archive in the repo is **not** a CMUnity program — it must not be linked from the site or cited as the Discourse vehicle.*
+2. **Discourse — rehabilitating the flow of information.** Increasing the frequency and duration of substantive conversation on philosophy, politics, religion, culture, and the human condition — making communication more efficient and more conducive to the truth. The vehicle is **non-debate**: CMUnity's **Discord** (ongoing conversation) and recurring **General Body Meetings (GBMs)**. *Note: the `/debates/` archive in the repo is **not** a CMUnity program — it must not be linked from the site or cited as the Discourse vehicle.*
 3. **Kindness & care — direct charity.** Showing genuine kindness; a large share of the work is direct care for neighbors.
 
 **Audience.** All of Carnegie Mellon — students first, but explicitly staff, faculty, and administration too — plus friends and neighbors beyond campus. Prospective exec/members are a primary near-term audience (the org is recruiting).
@@ -67,7 +67,7 @@ The center of gravity is **friendship as foundation**: a campus of strangers bec
 
 - **The genuine warmth of mutual-aid / community-organizing identities** — invitational, human, hopeful; the feeling of being welcomed in.
 - **Comment Magazine, Plough, Works in Progress** — for the discourse pillar: serious ideas presented warmly, not austerely.
-- **The Atlantic / Lapham's Quarterly** — editorial bones for long-form (dispatches, essays, reading-group notes) without letting that register dominate the whole brand.
+- **The Atlantic / Lapham's Quarterly** — editorial bones for long-form (dispatches, essays, GBM recaps) without letting that register dominate the whole brand.
 
 Avoid: club-marketing aesthetics (loud gradients, sticker packs, dense emoji), generic SaaS landing pages, startup-pitch energy, *and* cold institutional/think-tank austerity — friendship-first means the brand must never feel like it's keeping the reader at arm's length.
 
@@ -77,7 +77,7 @@ Avoid: club-marketing aesthetics (loud gradients, sticker packs, dense emoji), g
 
 **Commons is the chosen direction.** It reads as *a community welcoming you in* — the warmest of the three explored, and the closest fit for a friendship-first mission where the first job is making a visitor feel wanted. Quorum (warm-editorial) and Forum (institutional) were the explored alternatives and remain on the preview as reference only; their type and color are out of scope from here.
 
-The remainder of this spec (§3–§5) describes the **Commons system** as locked. The only area still exploratory is the *execution* of the mark, within the chosen **woven-gathering** concept (overlapping rings sharing a center — friendship as overlapping circles). One note for the designer: if the discourse pillar's long-form (dispatches, reading-group notes) ever wants a more editorial treatment, Quorum's serif register is the sanctioned place to borrow from — but the master brand is Commons.
+The remainder of this spec (§3–§5) describes the **Commons system** as locked. The only area still exploratory is the *execution* of the mark, within the chosen **woven-gathering** concept (overlapping rings sharing a center — friendship as overlapping circles). One note for the designer: if the discourse pillar's long-form (dispatches, GBM recaps) ever wants a more editorial treatment, Quorum's serif register is the sanctioned place to borrow from — but the master brand is Commons.
 
 ---
 
@@ -199,9 +199,9 @@ The site is built on **Jekyll + Tailwind CDN** and deployed via GitHub Pages wit
 | **Home (`/`)**          | Rebuild     | Hero, mission strip, three-pillars section, Discourse-vehicle module, recruiting CTA, footer. |
 | **About / Three pillars**| New        | Mission in depth, the three pillars, who we're for (CMU + beyond), how friendship→movement. |
 | **Get involved**        | New         | The recruiting call — exec roles open to anyone, what helping looks like, Discord.     |
-| **Programs**            | New         | The Discourse vehicle (reading groups / dialogues / salons) + care/kindness work. *(No debates.)* |
+| **Programs**            | New         | The Discourse vehicle (Discord + General Body Meetings) + care/kindness work. *(No debates.)* |
 | **Events**              | New         | Upcoming + past gatherings with date, location, RSVP / Discord link.                  |
-| **Dispatches**          | Optional    | If we publish essays, reading-group notes, member writing — a simple article template.|
+| **Dispatches**          | Optional    | If we publish essays, GBM recaps, member writing — a simple article template.          |
 | **404**                 | New         | A short, on-brand fallback page.                                                      |
 
 > The `/debates/` files remain in the repo but are **not** a CMUnity program and must stay fully unlinked — no nav entry, no template, no card.
@@ -211,7 +211,7 @@ The site is built on **Jekyll + Tailwind CDN** and deployed via GitHub Pages wit
 - **12-column grid**, 1280 px max content width, generous outer margins on large screens.
 - **Spacing scale:** 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128 (px). Designer may extend, not contract.
 - **Responsive breakpoints** to mirror Tailwind defaults: `sm` 640, `md` 768, `lg` 1024, `xl` 1280, `2xl` 1536.
-- **Reading-width column** for long-form dispatches and reading-group notes: ~68ch.
+- **Reading-width column** for long-form dispatches and GBM recaps: ~68ch.
 
 ### Components
 
@@ -223,7 +223,7 @@ The designer should produce a small component library so a developer can impleme
 - Section heading (eyebrow + headline + lede)
 - Pillar card (the three-pillar grid, with the lens motif marker)
 - Event / gathering card (date chip, title, location, CTA)
-- Program card (reading group / dialogue / salon — title, cadence, how to join)
+- Program / GBM card (title, cadence, location, how to join via Discord)
 - Long-form article body (headings, blockquotes, pull quotes, lists, footnotes, image with caption)
 - Buttons (primary, secondary, tertiary / text-link, with states: default, hover, focus, disabled)
 - Form controls (input, textarea, select, checkbox — for any future RSVP / signup)
@@ -246,7 +246,7 @@ The designer should produce a small component library so a developer can impleme
 
 ### Imagery & iconography
 
-- **Photography direction.** Documentary, available-light, candid — people in real conversation, reading groups in progress, hands sharing food or work, the small moments of friendship and care. Avoid posed group photos and stock imagery. When stock is unavoidable, prefer Unsplash editorial-style over corporate imagery.
+- **Photography direction.** Documentary, available-light, candid — people in real conversation, GBMs and Discord meetups in progress, hands sharing food or work, the small moments of friendship and care. Avoid posed group photos and stock imagery. When stock is unavoidable, prefer Unsplash editorial-style over corporate imagery.
 - **Iconography.** The current site uses Font Awesome + emoji. Replace with a **single icon system** — designer to propose (Phosphor, Lucide, or a small bespoke set). One stroke weight, one corner treatment, one optical size system.
 
 ---
@@ -320,13 +320,13 @@ The designer should return:
 - `index.html` — current home page; uses CMU red `#C41230`, Playfair Display, Open Sans, Font Awesome icons, emoji in principle cards. To be rebuilt on the Commons system.
 - `debates/*.html` — **not a CMUnity program.** These files exist in the repo for unrelated historical reasons; per the founder they stay in the repo but **fully unlinked** — no nav, no template, not referenced anywhere brand-facing. Listed here only so a contributor doesn't mistake them for CMUnity content to restyle.
 
-**Resolved (v1.3):** Direction = **Commons**. Type = Bricolage Grotesque + Source Serif 4. Palette = bone/plum/ochre (table in §4). Mark concept = woven gathering (live, refined, on the preview). Discourse vehicle = non-debate (reading groups / dialogues / salons). Tagline in use: *More than just a connection.* Living brand-system page: **[preview.cm-unity.org/system](https://preview.cm-unity.org/system)**.
+**Resolved (v1.3):** Direction = **Commons**. Type = Bricolage Grotesque + Source Serif 4. Palette = bone/plum/ochre (table in §4). Mark concept = woven gathering (live, refined, on the preview). Discourse vehicle = non-debate (CMUnity Discord + General Body Meetings). Tagline in use: *More than just a connection.* Living brand-system page: **[preview.cm-unity.org/system](https://preview.cm-unity.org/system)**.
 
 **Open questions remaining for the designer:**
 
 - Wordmark: keep "CMUnity" as one tone, or articulate the *CMU*-in-*Community* nesting with a subtle weight/tone shift in the "CMU" letters? (Lean: subtle articulation.)
 - Is there appetite for an institutional **secondary/seal mark** (letterheads, certificates) alongside the primary woven-gathering mark?
-- The Discourse vehicle's concrete form — reading groups, facilitated dialogues, salons, or a mix — and what each is called. (Pillar is locked; the program names are not.)
+- GBM presentation: cadence, naming, and how the Discord↔GBM relationship is shown on the site. (Pillar *and* vehicle are locked — Discord + GBMs; only the surface treatment is open.)
 - Lock *More than just a connection* as the tagline at v1, or keep fluid until the friendship-first copy voice settles?
 
 ---
